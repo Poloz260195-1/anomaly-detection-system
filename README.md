@@ -86,7 +86,7 @@ MAX_ALERTS_PER_DAY = 6       # Максимум алертов в день
 ## 👨‍💻 Автор
 
 **Алексей Полозов**
-- GitHub: [@aleksej-polozov-bel8894](https://github.com/aleksej-polozov-bel8894)
+- GitHub: [@Poloz260195-1](https://github.com/Poloz260195-1)
 
 ## 📄 Лицензия
 
