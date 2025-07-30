@@ -1,0 +1,6 @@
+pandas>=1.5.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+pandahouse>=0.2.0
+python-telegram-bot>=13.0.0
+apache-airflow>=2.5.0 

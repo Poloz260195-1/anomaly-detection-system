@@ -1,0 +1,9 @@
+# Telegram Bot
+BOT_TOKEN=your_telegram_bot_token_here
+CHAT_ID=your_chat_id_here
+
+# ClickHouse Database
+CLICKHOUSE_HOST=https://clickhouse.lab.karpov.courses
+CLICKHOUSE_DATABASE=simulator_20250620
+CLICKHOUSE_USER=student
+CLICKHOUSE_PASSWORD=dpo_python_2020 
