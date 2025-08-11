@@ -172,14 +172,14 @@ def run_alerts_with_cooldown(chat_id):
             FROM (
                 SELECT 
                     toStartOfFifteenMinutes(time) AS ts,
-                    toDate(toStartOfFifteenMinutes(time)) AS date,
+                    toDate(time) AS date,
                     formatDateTime(toStartOfFifteenMinutes(time), '%R') AS hm,
                     uniqExact(user_id) AS users_lenta,
                     sum(action = 'view') AS views,
                     sum(action = 'like') AS likes
                 FROM simulator_20250620.feed_actions
-                WHERE toStartOfFifteenMinutes(time) >= today() - 14
-                      AND toStartOfFifteenMinutes(time) < toStartOfFifteenMinutes(now())
+                WHERE time >= today() - 14
+                      AND time < now()
                 GROUP BY ts
             )
             ORDER BY ts'''
@@ -195,13 +195,13 @@ def run_alerts_with_cooldown(chat_id):
             FROM (
                 SELECT 
                     toStartOfFifteenMinutes(time) AS ts,
-                    toDate(toStartOfFifteenMinutes(time)) AS date,
+                    toDate(time) AS date,
                     formatDateTime(toStartOfFifteenMinutes(time), '%R') AS hm,
                     uniqExact(user_id) AS users_message,
                     count(*) AS sent_message
                 FROM simulator_20250620.message_actions
-                WHERE toStartOfFifteenMinutes(time) >= today() - 14
-                      AND toStartOfFifteenMinutes(time) < toStartOfFifteenMinutes(now())
+                WHERE time >= today() - 14
+                      AND time < now()
                 GROUP BY ts
             )
             ORDER BY ts'''
